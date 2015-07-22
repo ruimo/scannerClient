@@ -1,0 +1,31 @@
+#root {
+  -fx-font-size: 32px;
+}
+
+#visitorTable {
+  -fx-focus-traversable: false;
+}
+
+#topLabel, #inputArea, #reportArea {
+  -fx-font-size: 140%;
+}
+
+#topLabel {
+  -fx-text: '来訪回数';
+}
+
+#inputAreaBorder, #reportAreaBorder {
+  -fx-effect: innershadow(three-pass-box, gray, 12 , 0.5, 1, 1);
+}
+
+#inputArea, #reportArea {
+  -fx-padding: 8px;
+}
+
+#inputArea {
+  -fx-background-color: #CCFF99;
+}
+
+#reportArea {
+  -fx-background-color: #FFCC99;
+}

@@ -1,0 +1,2 @@
+Build:
+Oracle JavaをPATHに入れて(~/oss/jdk1.8.0)、activatorで、universal:dist

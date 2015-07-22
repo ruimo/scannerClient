@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- xml-mode -*- -->
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane fx:id="root" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ruimo.samples.scannerclient.MainController">
+  <stylesheets>
+    <URL value="@main.css"/>
+  </stylesheets>
+
+  <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+  </padding> 
+
+  <top>
+    <Label fx:id="topLabel" text="来客リスト"/>
+  </top>
+
+  <center>
+    <TableView fx:id="visitorTable">
+      <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+      </columnResizePolicy>
+      <columns>
+        <TableColumn text="id" fx:id="userId">
+          <cellValueFactory>
+            <PropertyValueFactory property="id"/>
+          </cellValueFactory>          
+        </TableColumn>
+        <TableColumn fx:id="count">
+          <cellValueFactory>
+            <PropertyValueFactory property="count"/>
+          </cellValueFactory>          
+        </TableColumn>
+      </columns>
+      <BorderPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </BorderPane.margin>
+    </TableView>
+  </center>
+
+  <bottom>
+    <GridPane maxWidth="Infinity" fx:id="inputReportArea">
+      <columnConstraints>
+        <ColumnConstraints hgrow="always" minWidth="10.0"/>
+      </columnConstraints>
+      <children>
+        <HBox GridPane.rowIndex="0" GridPane.columnIndex="0" fx:id="inputAreaBorder">
+          <Label fx:id="inputArea" alignment="BOTTOM_RIGHT" maxWidth="Infinity" HBox.hgrow="always"/>
+        </HBox>
+        <HBox GridPane.rowIndex="1" GridPane.columnIndex="0" fx:id="reportAreaBorder">
+          <Label fx:id="reportArea" maxWidth="Infinity" HBox.hgrow="always"/>
+        </HBox>
+      </children>
+    </GridPane>
+  </bottom>
+</BorderPane>
